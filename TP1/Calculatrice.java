@@ -1,44 +1,57 @@
+/**
+ * Création de classe : Classe Calculatrice ( Tp1-4.1)
+ * Date de création : 22/09
+ */
+
 package tp1;
 
 /**
- * Cette classe modÃ©lise une calculatrice simplifiÃ©e avec une valeur courante et trois opÃ©rations. 
- * @author vvandens
- *
+ * Classe permettant de créer une calculatrice basique
+ * @author Foureau Emmanuel
  */
+
 public class Calculatrice {
+	// Attributs - Variables d'instances
 	
-	double valeurCourante; // Stocke la valeur affichÃ©e sur l'Ã©cran de la calculatrice
+	double valeurCourante;
+	
 	
 	/**
-	 * Additionne un nombre Ã  la valeur courante
-	 * @param n le nombre Ã  ajouter Ã  la valeur courante de la calculatrice
+	 *  Méthode ajoutant le nombre n à la valeurCourante
+	 * @param n est le nombre à ajouter -
 	 */
+	
 	void ajoute(double n) {
-		valeurCourante+=n;
-	}
-	/**
-	 * Soustrait un nombre Ã  la valeur courante
-	 * @param n le nombre Ã  soustraire Ã  la valeur courante de la calculatrice
-	 */
-	void soustrait(double n) {
-		valeurCourante-=n;
-	}
-	/**
-	 * ElÃ¨ve la valeur courante au carrÃ©
-	 */
-	void carre() {
-		valeurCourante*=valeurCourante;
+		valeurCourante = valeurCourante + n;
 	}
 	
 	/**
-	 * MÃ©thode main permettant de lancer un test rapide de la classe calculatrice.
-	 * @param args les arguments de la ligne de commande
+	 * Méthode soustrayant le nombre n à la valeur courante
+	 * @param n est le nombre à soustraire
+	 */
+	
+	void soustrait(double n) {
+		valeurCourante = valeurCourante - n;
+	}
+	
+	/**
+	 * Méthode qui met au carré la valeurCourante
+	 */
+	
+	void carre() {
+		valeurCourante = Math.pow(valeurCourante, 2);
+	}
+	
+	/**
+	 * Lignes d'éxécution de la classe
+	 * @param args : Paramètre de la ligne de commande
 	 */
 	public static void main(String[] args) {
-		Calculatrice myCalc = new Calculatrice();
-		myCalc.ajoute(5);
-		myCalc.soustrait(2);
-		System.out.println(myCalc.valeurCourante);
+		Calculatrice calc = new Calculatrice();
+		calc.ajoute(5);
+		calc.soustrait(2);
+		calc.carre();
+		System.out.println(calc.valeurCourante);
 	}
 
 }

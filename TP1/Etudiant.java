@@ -1,31 +1,35 @@
+/**
+ * Création de classe : Classe Etudiant ( Tp1-4.2 )
+ * Date de création : 22/09
+ */
 package tp1;
 
-
 /**
- * Classe permettant la reprÃ©sentation d'un Ã©tudiant
- * @author Virginie Van den Schrieck
+ * Classe qui crée un étudiant
+ * @author Foureau Emmanuel
  */
 public class Etudiant {
-	//Variables d'instance
-	String nom;
-	String prÃ©nom;
-	int matricule;
-	//Cette variable d'instance est du type Date, disponible dans le mÃªme package
-	Date dateNaissance;
+	// Attributs
 	
-	/*
-	 * MÃ©thode main qui crÃ©e un Ã©tudiant et initialise les variables d'instance au dÃ©part de la ligne de commande
-	 * 
+	String nom;
+	String prenom;
+	int matriculeEtudiant;
+	Date date;
+	
+
+	/**
+	 * Main permettant la création d'un nouvel étudiant
+	 * @param args : Arguments de la ligne de commande
 	 */
 	public static void main(String[] args) {
-		Etudiant etu = new Etudiant();
+		Etudiant etu = new Etudiant(); // Création d'un nouvel étudiant
+		// Instance des attributs avec les arguments de la ligne de commande
 		etu.nom = args[0];
-		etu.prÃ©nom = args[1];
-		etu.matricule = Integer.parseInt(args[2]);
-		etu.dateNaissance = new Date();
-		etu.dateNaissance.jour = Integer.parseInt(args[3]);
-		etu.dateNaissance.mois = Integer.parseInt(args[4]);
-		etu.dateNaissance.annÃ©e = Integer.parseInt(args[5]);
+		etu.prenom = args[1];
+		etu.matriculeEtudiant = Integer.parseInt(args[2]);
+		etu.date = new Date(Integer.parseInt(args[3]), Integer.parseInt(args[4]),Integer.parseInt(args[5]));
+		
+		System.out.println(etu.nom + " " + etu.prenom + " " + etu.matriculeEtudiant + " " + etu.date); // Affichage des attributs de l'étudiant
 	}
 
 }

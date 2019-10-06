@@ -102,6 +102,15 @@ public class IP {
 		this.setOctet3(octet3);
 		this.setOctet4(octet4);
 	}
+	
+	
+
+	@Override
+	public String toString() {
+		return "IP [octet1=" + octet1 + ", octet2=" + octet2 + ", octet3=" + octet3 + ", octet4=" + octet4 + "]";
+	}
+
+
 
 	/** 
 	 * Création d'adresse IP
@@ -109,7 +118,7 @@ public class IP {
 	 */
 	public static void main(String[] args) {
 		IP ip = new IP(Integer.parseInt(args[0]), Integer.parseInt(args[1]), Integer.parseInt(args[2]), Integer.parseInt(args[3]));
-		System.out.println("L'adresse ip est la suivante : " + ip.octet1 + "." + ip.octet2 + "." + ip.octet3 + "." + ip.octet4 + " !");
+		System.out.println(ip);
 	}
 
 }

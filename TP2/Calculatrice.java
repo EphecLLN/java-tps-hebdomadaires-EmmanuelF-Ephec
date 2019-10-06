@@ -75,6 +75,15 @@ public class Calculatrice {
 		valeurCourante = Math.pow(valeurCourante, 2);
 	}
 	
+	
+	/**
+	 * Méthode d'affichage à l'écran
+	 */
+	@Override
+	public String toString() {
+		return "Calculatrice [valeurCourante=" + valeurCourante + "]";
+	}
+
 	/**
 	 * Lignes d'éxécution de la classe
 	 * @param args : Paramètre de la ligne de commande
@@ -90,7 +99,7 @@ public class Calculatrice {
 		calc.ajoute(5);
 		calc.soustrait(2);
 		calc.carre();
-		System.out.println(calc.valeurCourante);
+		System.out.println(calc);
 	}
 
 }

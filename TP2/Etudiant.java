@@ -98,6 +98,15 @@ public class Etudiant {
 	}
 	
 	
+	
+	
+	@Override
+	public String toString() {
+		return "Etudiant [nom=" + nom + ", prenom=" + prenom + ", matriculeEtudiant=" + matriculeEtudiant + ", date="
+				+" " + date.getJour() + "/" + date.getMois() + "/" + date.getAnnee() + "]";
+	}
+
+
 	/**
 	 * Main permettant la création d'un nouvel étudiant
 	 * @param args : Arguments de la ligne de commande
@@ -106,7 +115,7 @@ public class Etudiant {
 	public static void main(String[] args) {
 		Etudiant etu = new Etudiant(args[0], args[1], Integer.parseInt(args[2]), Integer.parseInt(args[3]), Integer.parseInt(args[4]), Integer.parseInt(args[5])); // Création d'un nouvel étudiant
 		// Instance des attributs avec les arguments de la ligne de commande
-		System.out.println(etu.nom + " " + etu.prenom + " " + etu.matriculeEtudiant + " " + etu.date.getJour() + "/" + etu.date.getMois() + "/" + etu.date.getAnnee()); // Affichage des attributs de l'étudiant
+		System.out.println(etu); // Affichage des attributs de l'étudiant
 	}
 
 }

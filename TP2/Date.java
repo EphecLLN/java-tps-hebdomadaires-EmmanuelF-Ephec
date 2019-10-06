@@ -78,13 +78,22 @@ public class Date {
 			return false;
 		}
 	}
+	
+	
+	
+	@Override
+	public String toString() {
+		return "Date [jour=" + jour + ", mois=" + mois + ", annee=" + annee + "]";
+	}
+
 	/**
 	 * @param args : Arguments de la ligne de commande
 	 */
+	
 	public static void main(String[] args) { 
 		if (between(0, 32, Integer.parseInt(args[0])) && between(0, 13, Integer.parseInt(args[1])) && Integer.parseInt(args[2]) < 2020) 	{
 			Date date = new Date(Integer.parseInt(args[0]),Integer.parseInt(args[1]),Integer.parseInt(args[2]));
-			System.out.println("La date de naissance est le : " + date.jour + "/" + date.mois + "/" + date.annee);
+			System.out.println(date);
 		}
 		else {
 			System.out.println("Une des valeurs rentrées est incorrecte.");

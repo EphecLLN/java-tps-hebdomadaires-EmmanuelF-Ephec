@@ -71,13 +71,19 @@ public class Livre {
 		this.setNumISBN(numISBN);
 	}
 
+	
+	@Override
+	public String toString() {
+		return "Livre [titre=" + titre + ", auteur=" + auteur + ", numISBN=" + numISBN + "]";
+	}
+
 	/**
 	 * Création de livre
 	 * @param args : Arguments de la ligne de commande
 	 */
 	public static void main(String[] args) {
 		Livre livre = new Livre(args[0], args[1], args[2]);
-		System.out.println("Le livre " + livre.titre + " écrit par " + livre.auteur + " possède le numéro ISBN suivant : " + livre.numISBN + ".");
+		System.out.println(livre);
 	}
 
 }

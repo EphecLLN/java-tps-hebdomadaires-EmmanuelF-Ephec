@@ -4,7 +4,7 @@
  * 
  */
 
-package tp1;
+package tp2;
 
 /**
  * La classe HelloWorld imprime Hello World sur la sortie standard 

@@ -4,6 +4,8 @@
  */
 package tp2;
 
+import tp2.Etudiant;
+
 /**
  * Classe qui crée un étudiant
  * @author Foureau Emmanuel
@@ -14,8 +16,6 @@ public class Etudiant {
 	private String nom;
 	private String prenom;
 	private int matriculeEtudiant;
-	private Date date;
-	
 	
 	/**
 	 * @return the nom
@@ -64,37 +64,18 @@ public class Etudiant {
 		this.matriculeEtudiant = matriculeEtudiant;
 	}
 
-
-	/**
-	 * @return the date
-	 */
-	public Date getDate() {
-		return date;
-	}
-
-
-	/**
-	 * @param date the date to set
-	 */
-	public void setDate(int jour, int mois, int annee) {
-		this.date = new Date(jour, mois , annee);
-	}
 	
 	/**
 	 * Initialise un étudiant
 	 * @param nom = nom etudiant
 	 * @param prenom = prenom etudiant
 	 * @param matriculeEtudiant = matricule de l'étudiant
-	 * @param jour = jour de naissance de l'étudiant
-	 * @param mois = mois de naissance de l'étudiant
-	 * @param annee = année de naissance de l'étudiant 
 	 */
 
-	public Etudiant(String nom, String prenom, int matriculeEtudiant, int jour, int mois, int annee) {
+	public Etudiant(String nom, String prenom, int matriculeEtudiant) {
 		this.setNom(nom);
 		this.setPrenom(prenom);
 		this.setMatriculeEtudiant(matriculeEtudiant);
-		this.setDate(jour, mois, annee);
 	}
 	
 	
@@ -102,8 +83,7 @@ public class Etudiant {
 	
 	@Override
 	public String toString() {
-		return "Etudiant [nom=" + nom + ", prenom=" + prenom + ", matriculeEtudiant=" + matriculeEtudiant + ", date="
-				+" " + date.getJour() + "/" + date.getMois() + "/" + date.getAnnee() + "]";
+		return "Etudiant [nom=" + nom + ", prenom=" + prenom + ", matriculeEtudiant=" + matriculeEtudiant + "]";
 	}
 
 
@@ -113,7 +93,7 @@ public class Etudiant {
 	 */
 	 
 	public static void main(String[] args) {
-		Etudiant etu = new Etudiant(args[0], args[1], Integer.parseInt(args[2]), Integer.parseInt(args[3]), Integer.parseInt(args[4]), Integer.parseInt(args[5])); // Création d'un nouvel étudiant
+		Etudiant etu = new Etudiant(args[0], args[1], Integer.parseInt(args[2])); // Création d'un nouvel étudiant
 		// Instance des attributs avec les arguments de la ligne de commande
 		System.out.println(etu); // Affichage des attributs de l'étudiant
 	}

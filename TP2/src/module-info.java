@@ -1,0 +1,2 @@
+module Tp2 {
+}

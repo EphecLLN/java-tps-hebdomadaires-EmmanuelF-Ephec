@@ -1,0 +1,68 @@
+/**
+* Cette méthode calcule le carré d’un nombre.
+* @param n : Un nombre entier quelconque
+* @return Un nombre >= 0, résultat de la multiplication de n par lui-même
+*/
+public int carre(int n){
+//TODO : A implementer
+return 0;
+}
+
+!----------------
+
+Méthode pair 
+
+/**
+* Cette méthode test si un nombre est pair ou impair 
+* @param n : Un nombre entier positif ou négatif 
+* @ return Un boolean : true pour un nbr positif et false si négatif 
+*/
+public boolean estPair(int n) {
+	//TODO 
+	return false;
+}
+
+Valeurs de test :
+
+param n = -2, -1, 0, 1, 2 , 4
+return boolean = true, false, true, false, true, true
+
+!-----------
+
+Méthode perimetreCarre 
+
+/** 
+* Cette méthode calcule le perimetre sur base d'un nombre 
+* @param n : Un nombre strictement positif 
+* @return Un nombre > 0, le résultat de calcul du périmètre
+*/
+public int perimetreCarre(int n) {
+	// TODO
+	return 0;
+}
+
+Valeurs de test : 
+
+param n = -1 , 0, 2, 4
+Return int = Erreur, erreur, 8, 16
+
+!---------------
+
+Methode trouverCarac
+
+/**
+* Cette méthode cherche un caractère spécifique dans une chaîne de caractères 
+* @param char c : Le caractère à chercher 
+* @param String s : La chaîne de caractère non-vide à analyser 
+* @return Un boolean : True si le caractère est trouvé et false si l'inverse
+*/
+public boolean contientCaractere(char c, String s) {
+	// TODO
+	return false;
+}
+
+Valeur de test : 
+
+param c = ""," ", "a", "b", "é", "z".
+param s = "Le caractère est cherché."
+return = erreur, true, true, false, true, false

@@ -10,21 +10,24 @@ public class BibliothequeMVC {
 	public BibliothequeMVC() {
 		//Création du modèle
 		
-		//TODO
+		Bibliotheque biblio = new Bibliotheque();
 
 		//Création des contrôleurs : Un pour chaque vue
 		//Chaque contrôleur doit avoir une référence vers le modèle pour pouvoir le commander
 		
-		//TODO
+		BibliothequeController controllerConsole = new BibliothequeController(biblio);
+		BibliothequeController controllerGUI = new BibliothequeController(biblio);
 		
 		//Création des vues.
 		//Chaque vue doit connaître son contrôleur et avoir une référence vers le modèle pour pouvoir l'observer
 		
-		//TODO
+		BibliothequeVueConsole biblioConsole = new BibliothequeVueConsole(biblio, controllerConsole);
+		BibliothequeVueGUI biblioGUI = new BibliothequeVueGUI(biblio, controllerGUI, 0 , 0);
 		
 		//On donne la référence à la vue pour chaque contrôleur
 		
-		//TODO
+		biblio.addObserver(biblioConsole);
+		biblio.addObserver(biblioGUI);
 		
 		
 	}

@@ -80,6 +80,7 @@ public class BibliothequeVueGUI extends BibliothequeVue implements ActionListene
 		}
 		String[] head = {"N°", "Titre", "Disponibilité"};
 		table = new JTable(data, head);
+		affiche("");
 			
 	}
 	@Override

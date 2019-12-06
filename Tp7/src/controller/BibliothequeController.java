@@ -19,12 +19,22 @@ public class BibliothequeController {
 
 
 	public void emprunteLivre(int numLivre) {
-	
-		//TODO 
+		if (model.emprunte(numLivre)) {
+			System.out.println("Le livre a bien été emprunté.");
+		}
+		else {
+			System.out.println("Le livre est déjà emprunté.");
+		}
 	}
 
 	public void rendreLivre(int numLivre) {
-		//TODO
+		if (model.getLivres()[numLivre].estEmprunte()) {
+			model.rendre(numLivre);
+			System.out.println("Le livre a été rendu.");
+		}
+		else {
+			System.out.println("Le livre a déjà été rendu.");
+		}
 	}
 
 
